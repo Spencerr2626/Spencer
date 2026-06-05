@@ -2,9 +2,23 @@
 
 Goal: let Claude read **and write** the CRM live in Google Sheets — no more download/upload of the `.xlsx`.
 
-Server used: **[`xing5/mcp-google-sheets`](https://github.com/xing5/mcp-google-sheets)** (service-account auth, runs via `uvx`).
+There are two ways to connect. Both are pre-wired in the repo's `.mcp.json`.
 
-> **Where this works:** **Claude Code on desktop**, where you control the MCP config + network. It will **not** work in the Claude Code **web** session — that sandbox blocks Google's network and has no Google credentials. Do this setup on your Mac/PC.
+### Option A — Google's hosted Drive MCP (recommended, simplest) ⭐
+
+Remote server `https://drivemcp.googleapis.com/mcp/v1`. **No service account, no JSON keys, no Cloud project** — you just authorize with your Google login.
+
+1. Make sure `.mcp.json` has the `google-drive` server (it does).
+2. Launch Claude Code → run `/mcp` → pick `google-drive` → **Authenticate** → sign in with your Google account in the browser and grant Drive access.
+3. Verify: ask *"search my Drive for the Kommons CRM"* or *"read file `1uCXxZcRg3LWIyDC0B2S_iLZ7QuGa2SuzYK60lid_Idk`."*
+
+Tools it gives: `read_file_content`, `download_file_content`, `search_files`, `get_file_metadata`, `create_file`, `copy_file`, `get_file_permissions`, `list_recent_files`. Great for **reading** the CRM and creating files. It does **not** do cell-level edits — for granular writes use Option B.
+
+> The endpoint is reachable even from the Claude Code **web** sandbox, so this may work in web sessions too (try `/mcp` → authenticate). Calls fail with "missing OAuth 2 access token" until you authenticate.
+
+### Option B — Service-account Sheets MCP (granular cell read/write)
+
+Server **[`xing5/mcp-google-sheets`](https://github.com/xing5/mcp-google-sheets)** (runs via `uvx`). More setup (Steps 1–6 below) but supports precise cell edits. Best on **desktop**. Use this when you want the assistant updating individual CRM cells, not whole files.
 
 ---
 
