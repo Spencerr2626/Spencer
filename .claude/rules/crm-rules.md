@@ -5,8 +5,8 @@ Conventions for handling leads and contacts.
 ## Where the CRM lives
 
 - **Offline source (works everywhere, incl. web sessions):** the Excel workbook `Spencer_Kommons_CRM_v3.xlsx` in `references/crm/`. This is the working source of truth today.
-- **Live Google Sheet (desktop only, via MCP):** Spreadsheet ID `1XBCVRrnUnERB2vY7CTUopj-hQPgRtNa9`. Readable/writable only when the `google-sheets` MCP is connected on Claude Code **desktop** (see `references/sops/google-sheets-mcp-setup.md`). Not reachable from the web sandbox.
-- Keep the two in sync. Until the Google Sheet is confirmed live and converted to a **native** Sheet (not an uploaded `.xlsx`), treat the repo workbook as authoritative.
+- **Live Google Sheet (desktop only, via MCP):** native Sheet, Spreadsheet ID `1uCXxZcRg3LWIyDC0B2S_iLZ7QuGa2SuzYK60lid_Idk`. Readable/writable only when the `google-sheets` MCP is connected on Claude Code **desktop** (see `references/sops/google-sheets-mcp-setup.md`). Not reachable from the web sandbox.
+- Keep the two in sync. Until the Google Sheet is confirmed live via the MCP, treat the repo workbook as authoritative.
 
 ## Workbook Structure
 
