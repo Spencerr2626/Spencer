@@ -2,102 +2,109 @@
 
 Goal: let Claude read **and write** the CRM live in Google Sheets — no more download/upload of the `.xlsx`.
 
-**When to do this:** when you make your first hire (VA/TC) and need shared, concurrent access. As a solo agent the repo `.xlsx` is fine. (See `context/work.md`.)
+Server used: **[`xing5/mcp-google-sheets`](https://github.com/xing5/mcp-google-sheets)** (service-account auth, runs via `uvx`).
 
-**Where to do this:** easiest in **Claude Code on desktop**, where you control MCP config + network. The web/remote environment locks down outbound network and MCP, so it may not work there.
-
----
-
-## Overview (what you're building)
-
-```
-Claude Code (desktop)  ──>  Google Sheets MCP server  ──>  Google Sheets API  ──>  your CRM sheet
-                                     ▲
-                          authenticates as a Google
-                          "service account" you create
-```
-
-A **service account** is a robot Google user with its own email. You share your sheet with that email, and the MCP server logs in as it.
+> **Where this works:** **Claude Code on desktop**, where you control the MCP config + network. It will **not** work in the Claude Code **web** session — that sandbox blocks Google's network and has no Google credentials. Do this setup on your Mac/PC.
 
 ---
 
-## Step 1 — Put the CRM in Google Sheets
+## Overview
 
-1. Upload `references/crm/Spencer_Kommons_CRM_v3.xlsx` to Google Drive.
-2. Open it → **File → Save as Google Sheets** (converts to native format).
-3. Keep the 5 sheet tabs and columns exactly as-is (see `.claude/rules/crm-rules.md`).
-4. From the URL, copy the **Spreadsheet ID**:
-   `https://docs.google.com/spreadsheets/d/`**`<THIS_IS_THE_ID>`**`/edit`
+```
+Claude Code (desktop) ──> mcp-google-sheets (uvx) ──> Google Sheets API ──> your CRM sheet
+                                  ▲
+                     authenticates as a Google
+                     "service account" you create
+```
 
-> Note: Google Sheets may not render the dashboard's shapes/drawings identically. The data is what matters; rebuild the dashboard visuals natively if needed.
+A **service account** is a robot Google user with its own email. You share a Drive **folder** with that email; the MCP server acts as it.
 
-## Step 2 — Create a Google service account + key
+The repo already contains a ready-to-use **`.mcp.json`** — you only need to (a) do the Google Cloud side and (b) set two environment variables.
 
-1. Go to <https://console.cloud.google.com/> → create a project (e.g. "spencer-crm").
-2. **APIs & Services → Library** → enable **Google Sheets API** and **Google Drive API**.
-3. **APIs & Services → Credentials → Create credentials → Service account**. Name it (e.g. `crm-bot`).
-4. Open the service account → **Keys → Add key → Create new key → JSON**. A `.json` key file downloads. **Keep it secret.**
-5. Copy the service account **email** (looks like `crm-bot@spencer-crm.iam.gserviceaccount.com`).
+---
 
-## Step 3 — Share the sheet with the service account
+## Prerequisites
 
-In Google Sheets → **Share** → paste the service account email → give **Editor** → send. (No email notification needed.)
+- **Claude Code desktop** installed.
+- **uv / uvx** installed (runs the server): `curl -LsSf https://astral.sh/uv/install.sh | sh`
+  - macOS "spawn uvx ENOENT" → use the full path, e.g. `/Users/<you>/.local/bin/uvx`, in `.mcp.json`.
+
+## Step 1 — Put the CRM in a Drive folder as a Google Sheet
+
+1. In Google Drive, create a folder, e.g. **"Spencer CRM"**.
+2. Upload `references/crm/Spencer_Kommons_CRM_v3.xlsx` into it.
+3. Open it → **File → Save as Google Sheets** (native format).
+4. Grab two IDs from the URLs:
+   - **Spreadsheet ID:** `https://docs.google.com/spreadsheets/d/`**`<SPREADSHEET_ID>`**`/edit`
+   - **Folder ID:** open the folder → `https://drive.google.com/drive/folders/`**`<FOLDER_ID>`**
+
+> Note: Sheets may not render the dashboard's drawings identically. The data carries over fine; rebuild dashboard visuals natively if you care about them.
+
+## Step 2 — Create a service account + key
+
+1. <https://console.cloud.google.com/> → create a project (e.g. "spencer-crm").
+2. **APIs & Services → Library** → enable **Google Sheets API** *and* **Google Drive API**.
+3. **APIs & Services → Credentials → Create credentials → Service account** (name e.g. `crm-bot`).
+4. Open it → **Keys → Add key → Create new key → JSON** → downloads a `.json`. **Keep it secret.**
+5. Copy the service account **email** (e.g. `crm-bot@spencer-crm.iam.gserviceaccount.com`).
+
+## Step 3 — Share the folder with the service account
+
+In Drive, right-click the **"Spencer CRM" folder → Share** → paste the service account email → **Editor** → Share. (Sharing the folder covers the sheet inside it.)
 
 ## Step 4 — Store the key file safely
 
 - Save the JSON key **outside the repo**, e.g. `~/.config/spencer-crm/service-account.json`.
-- **Never commit it.** `.gitignore` already blocks common service-account key patterns — keep it that way.
+- **Never commit it.** `.gitignore` already blocks service-account key patterns.
 
-## Step 5 — Add the Google Sheets MCP server to Claude Code
+## Step 5 — Configure the MCP server
 
-Pick a maintained Google Sheets MCP server (e.g. search "Google Sheets MCP server" — `mcp-google-sheets` is a common Python one runnable via `uvx`). **Read its README for the exact command + env var names** — they vary by server.
-
-Typical pattern with the Claude Code CLI:
-
-```bash
-claude mcp add google-sheets \
-  --env SERVICE_ACCOUNT_PATH=/Users/spencer/.config/spencer-crm/service-account.json \
-  -- uvx mcp-google-sheets
-```
-
-Or via a project `.mcp.json`:
+The repo's **`.mcp.json`** already defines the server using two env vars (so no secrets/paths live in the repo):
 
 ```json
 {
   "mcpServers": {
     "google-sheets": {
       "command": "uvx",
-      "args": ["mcp-google-sheets"],
+      "args": ["mcp-google-sheets@latest"],
       "env": {
-        "SERVICE_ACCOUNT_PATH": "/Users/spencer/.config/spencer-crm/service-account.json"
+        "SERVICE_ACCOUNT_PATH": "${GOOGLE_SHEETS_SA_PATH}",
+        "DRIVE_FOLDER_ID": "${GOOGLE_DRIVE_FOLDER_ID}"
       }
     }
   }
 }
 ```
 
-> ⚠️ `SERVICE_ACCOUNT_PATH` is illustrative — confirm the real variable name (some use `CREDENTIALS_PATH`, `GOOGLE_APPLICATION_CREDENTIALS`, etc.) in your chosen server's docs.
+Set the two variables in your shell profile (`~/.zshrc` / `~/.bashrc`), then restart your terminal:
 
-## Step 6 — Restart Claude Code & verify
+```bash
+export GOOGLE_SHEETS_SA_PATH="$HOME/.config/spencer-crm/service-account.json"
+export GOOGLE_DRIVE_FOLDER_ID="<FOLDER_ID from Step 1>"
+```
 
-1. Restart Claude Code so it loads the MCP server.
-2. Run `/mcp` (or check the tools list) to confirm `google-sheets` connected.
-3. Ask: *"List the tabs in spreadsheet `<ID>`"* then *"read the Active Leads sheet."*
-4. Once reads work, test a small write on a scratch cell before trusting it with live data.
+(Prefer the CLI instead of the file? `claude mcp add google-sheets --env SERVICE_ACCOUNT_PATH=$GOOGLE_SHEETS_SA_PATH --env DRIVE_FOLDER_ID=$GOOGLE_DRIVE_FOLDER_ID -- uvx mcp-google-sheets@latest`)
+
+## Step 6 — Launch & verify
+
+1. Start Claude Code **desktop** in this repo. It will prompt to approve the `google-sheets` MCP server — approve it.
+2. Run `/mcp` → confirm `google-sheets` is **connected**.
+3. Ask: *"List my spreadsheets"* then *"read the Active Leads tab of the CRM."*
+4. Test one small **write** on a scratch cell before trusting live data.
 
 ## Step 7 — Point the assistant at the sheet
 
-Once live, tell me the **Spreadsheet ID** and I'll update `context/work.md` + `.claude/rules/crm-rules.md` so the assistant uses the Google Sheet as the source of truth (and we retire the repo `.xlsx`, or keep it as a periodic backup).
+Once live, tell me the **Spreadsheet ID** and I'll update `context/work.md` + `.claude/rules/crm-rules.md` to treat the Google Sheet as the source of truth (and keep the repo `.xlsx` as a periodic backup).
 
 ---
 
 ## Security notes
 
-- The JSON key = full edit access as that service account. Treat it like a password. Never paste it into chat or commit it.
-- Use **least privilege**: this service account should only have access to the one CRM sheet.
-- The CRM contains client **PII** (names, phones, WeChat IDs) — keep the sheet's sharing tight (you + service account only).
-- If a key leaks: delete it in the Cloud Console (**Keys → delete**) and create a new one.
+- The JSON key = edit access as that service account. Treat it like a password. Never paste it in chat or commit it.
+- **Least privilege:** the service account should only have access to the "Spencer CRM" folder.
+- The CRM holds client **PII** (names, phones, WeChat IDs) — keep folder sharing tight (you + service account only). Do **not** leave the sheet on "anyone with the link."
+- If the key leaks: delete it in Cloud Console (**Keys → delete**) and create a new one.
 
 ## Fallback
 
-If MCP setup is more than you want right now, stay on the repo `.xlsx` workflow — I edit it and you sync. Revisit this SOP at first hire.
+Not ready? Stay on the repo `.xlsx` — I edit it, you sync. Revisit at first hire.
