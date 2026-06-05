@@ -27,11 +27,14 @@ Hit **RM 500k GCI this year** and **start building a team**. Every suggestion, d
 Reusable workflows live in `.claude/skills/`. Each skill is a folder with a `SKILL.md`:
 `.claude/skills/<skill-name>/SKILL.md`.
 
-Skills are built **organically** — when you notice the same request repeating, propose turning it into a skill. None exist yet.
+Skills are built **organically** — when you notice the same request repeating, propose turning it into a skill.
+
+### Built
+
+- **daily-lead-followup** — reads the CRM and surfaces who to follow up with today (Hot → Warm → Cold) + drafts a message per lead in their language. `.claude/skills/daily-lead-followup/`
 
 ### Skills to Build (backlog)
 
-- **daily-lead-followup** — each day, surface which warm/cold leads to contact + suggested message.
 - **listing-description** — draft luxury subsale listing descriptions from agency data.
 - **followup-message** — draft warm/cold follow-up messages in the lead's language.
 - **social-content** — generate platform-tailored content (RedNote, WeChat, TikTok EN/CN, IG, FB).
