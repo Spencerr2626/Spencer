@@ -2,3 +2,10 @@
 CLAUDE.local.md
 .claude/settings.local.json
 node_modules/
+
+# Google service-account keys / secrets — never commit
+service-account*.json
+*service-account*.json
+*-sa-key.json
+gcp-*.json
+secrets/
