@@ -9,3 +9,7 @@ service-account*.json
 *-sa-key.json
 gcp-*.json
 secrets/
+
+# Python
+__pycache__/
+*.pyc

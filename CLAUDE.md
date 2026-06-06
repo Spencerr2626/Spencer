@@ -32,6 +32,7 @@ Skills are built **organically** — when you notice the same request repeating,
 ### Built
 
 - **daily-lead-followup** — reads the CRM and surfaces who to follow up with today (Hot → Warm → Cold) + drafts a message per lead in their language. `.claude/skills/daily-lead-followup/`
+- **listing-proposal** — generate a branded Kommons "Property Showing Route" proposal deck (PDF) from property specs + photos. Cover → detail + photos page per property → contact back cover. `.claude/skills/listing-proposal/`
 
 ### Skills to Build (backlog)
 
