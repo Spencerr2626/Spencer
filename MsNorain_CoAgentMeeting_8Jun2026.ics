@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:norain-coagent-meeting-20260608@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260608T143000
+DTEND;TZID=Asia/Kuala_Lumpur:20260608T153000
+SUMMARY:Meeting w/ Co-Agent Angelin — Ms Norain (Astrea MK 12-07)
+DESCRIPTION:Meeting with co-agent Angelin (+60 12-397 2889)\nRe: Rental listing — Astrea Mont Kiara Unit 12-07\nOwner: Ms Norain (+60 16-213 8240)\n\nPurpose: Discuss rental listing terms for Astrea MK Unit 12-07
+LOCATION:Astrea Mont Kiara
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Co-agent Angelin meeting in 30 min
+END:VALARM
+END:VEVENT
+END:VCALENDAR
