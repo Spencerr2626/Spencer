@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:francis-bungalow-viewing-20260609@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260609T160000
+DTEND;TZID=Asia/Kuala_Lumpur:20260609T180000
+SUMMARY:Bungalow Viewings — Datuk Francis
+DESCRIPTION:Bungalow viewings with Datuk Francis (Hot — RM10m budget, local Chinese loan buyer).\nFollow-up: confirm units & prep beforehand.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Datuk Francis bungalow viewings in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:francis-sunway-kiara-hills-20260611@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260611T160000
+DTEND;TZID=Asia/Kuala_Lumpur:20260611T173000
+SUMMARY:Sunway Kiara Hills Viewing — Datuk Francis (2 units)
+DESCRIPTION:Sunway Kiara Hills with Datuk Francis — 2 units (RM4.5mil & RM8mil).\nNOTE: time shown as 4pm (carried over) — confirm with Datuk Francis.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Datuk Francis Sunway Kiara Hills viewing in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
