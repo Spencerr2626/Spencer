@@ -77,7 +77,7 @@ def sheet_records(ws, header_row=3):
 
 def is_done(rec):
     d = str(rec.get("Done?", "") or "").strip().lower()
-    return d in ("done", "yes", "y", "✓", "true")
+    return d in ("done", "yes", "y", "✓", "☑", "true", "resolved")
 
 
 def main():
