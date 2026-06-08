@@ -1,33 +1,34 @@
 ---
 name: realestate-report-pdf
-description: Professional PDF Property Report Generator — compiles all PROPERTY-*.md analysis files into a polished, client-ready PDF with score gauges, comparison tables, financial projections, and investment recommendations
-version: 1.0.0
+description: Professional PDF Property Report Generator (Malaysia) — compiles all PROPERTY-*.md analysis files into a polished, client-ready PDF with score gauges, comparison tables, financial projections, and investment recommendations
+version: 1.1.0
 author: AI Real Estate Analyst
-tags: [realestate, report, pdf, professional, client-ready, property-report]
+tags: [realestate, report, pdf, professional, client-ready, property-report, malaysia]
 command: /realestate report-pdf
 output: PROPERTY-REPORT.pdf
 ---
 
-# Professional PDF Property Report Generator
+# Professional PDF Property Report Generator (Malaysia)
 
-You are the PDF Report Generator for the AI Real Estate Analyst system. When invoked with `/realestate report-pdf`, you scan for all existing PROPERTY-*.md files in the current directory, extract the key data, scores, and analysis, compile everything into a structured JSON payload, and generate a polished, client-ready PDF report using the dedicated Python script.
+You are the PDF Report Generator for the AI Real Estate Analyst system. When invoked with `/realestate report-pdf`, you scan for all existing PROPERTY-*.md files in the current directory, extract the key data, scores, and analysis, compile everything into a structured payload, and generate a polished, client-ready PDF report.
 
-**DISCLAIMER: For educational/research purposes only. Not financial or investment advice. All estimates are AI-generated approximations. Always verify with licensed real estate professionals before making any purchase or investment decisions.**
+**Market default: Malaysia.** All currency in **RM**, areas in **sq ft**, pricing in **RM psf**, tenure **freehold/leasehold**.
+
+**DISCLAIMER: For educational/research purposes only. Not financial or investment advice. All estimates are AI-generated approximations. Always verify with licensed real estate professionals (BOVAEP-registered REN/REA).**
 
 ---
 
 ## PURPOSE
 
-Markdown reports are great for working analysis, but clients, agents, and investors need professional PDF deliverables. This skill transforms raw analysis files into a visually polished PDF with score gauges, data tables, financial projections, charts, and a clear investment recommendation — the kind of report you can attach to an email, present in a meeting, or hand to a lender.
+Markdown reports are great for working analysis, but clients and co-brokers need professional PDF deliverables. This skill transforms raw analysis files into a visually polished PDF with score gauges, data tables, financial projections, and a clear recommendation — ready to attach to WhatsApp/WeChat/email or present to a buyer.
 
 ---
 
 ## TRIGGER
 
-This skill activates when the user runs:
-- `/realestate report-pdf` — generate a PDF from all available analysis files
-- `/realestate report-pdf <address>` — generate a PDF for a specific property
-- Also triggered by "generate PDF", "create PDF report", "make a client report", or "professional report"
+- `/realestate report-pdf` — generate from all available analysis files
+- `/realestate report-pdf <name>` — generate for a specific property
+- Also: "generate PDF", "create PDF report", "make a client report", "professional report"
 
 ---
 
@@ -35,146 +36,66 @@ This skill activates when the user runs:
 
 ### STEP 1: CHECK FOR PDF GENERATION SCRIPT
 
-First, verify the dedicated Python script exists:
-
 ```bash
 ls ~/.claude/skills/realestate/scripts/generate_realestate_pdf.py 2>/dev/null
 ```
 
-**If the script exists:** Use it directly (proceed to Step 2).
-**If the script does not exist:** Generate the PDF inline using ReportLab (follow all steps and build the PDF generation code dynamically).
+**If it exists:** use it. **If not:** generate the PDF inline using ReportLab (build the code dynamically).
 
 ### STEP 2: SCAN FOR ANALYSIS FILES
-
-Search the current working directory for all PROPERTY-*.md files:
 
 ```bash
 ls -t PROPERTY-*.md 2>/dev/null
 ```
 
-**Primary data sources (check for all of these):**
+| File Pattern | Data | PDF Section |
+|-------------|------|-------------|
+| `PROPERTY-ANALYSIS-*.md` | Full analysis + composite score | Cover, all sections |
+| `PROPERTY-COMPS-*.md` | Transacted comps, RM psf, value est. | Comp Analysis |
+| `PROPERTY-RENTAL-*.md` | Rent, cash flow, gross/net yield | Cash Flow |
+| `PROPERTY-NEIGHBORHOOD-*.md` | Schools, safety, connectivity | Neighbourhood |
+| `PROPERTY-INVEST-*.md` | Strategies, ROI, RPGT | Investment |
+| `PROPERTY-MARKET-*.md` | NAPIC overhang, trends, OPR, MM2H | Market Conditions |
+| `PROPERTY-COMMERCIAL-*.md` | NOI, yield, lease | Commercial |
+| `PROPERTY-COMPARE.md` | Side-by-side | Comparison |
 
-| File Pattern | Data It Contains | PDF Section |
-|-------------|-----------------|-------------|
-| `PROPERTY-ANALYSIS-*.md` | Full analysis with composite Property Score | Cover page, all sections |
-| `PROPERTY-COMPS-*.md` | Comparable sales, price per sqft, value estimate | Comp Analysis section |
-| `PROPERTY-RENTAL-*.md` | Rental income, cash flow, cap rate | Cash Flow Projections section |
-| `PROPERTY-NEIGHBORHOOD-*.md` | Schools, safety, walkability, demographics | Neighborhood Scores section |
-| `PROPERTY-INVEST-*.md` | Investment scenarios, ROI, strategies | Investment Analysis section |
-| `PROPERTY-MARKET-*.md` | Market conditions, trends, inventory | Market Conditions section |
-| `PROPERTY-FLIP-*.md` | Rehab budget, ARV, flip profit estimate | Flip Analysis section |
-| `PROPERTY-COMMERCIAL-*.md` | NOI, cap rate, lease analysis | Commercial Analysis section |
-| `PROPERTY-MORTGAGE.md` | Payment calculator, affordability | Mortgage section |
-| `PROPERTY-COMPARE.md` | Side-by-side comparison | Comparison section |
-| `PROPERTY-LISTING-*.md` | MLS listing description | Listing section |
-| `PROPERTY-SCREEN-*.md` | Screener results | Screening section |
+Find the most recent of each (`ls -t ... | head -1`).
 
-**Find the most recent version of each:**
+**If no data exists:** recommend running `/realestate analyze <name>` first; or gather basic data via WebSearch (PropertyGuru/iProperty/EdgeProp/brickz) to populate the structure.
 
-```bash
-ls -t PROPERTY-ANALYSIS-*.md 2>/dev/null | head -1
-ls -t PROPERTY-COMPS-*.md 2>/dev/null | head -1
-ls -t PROPERTY-RENTAL-*.md 2>/dev/null | head -1
-ls -t PROPERTY-NEIGHBORHOOD-*.md 2>/dev/null | head -1
-ls -t PROPERTY-INVEST-*.md 2>/dev/null | head -1
-ls -t PROPERTY-MARKET-*.md 2>/dev/null | head -1
-```
+### STEP 3: EXTRACT DATA
 
-**If no previous data exists:**
-1. Recommend the user run `/realestate analyze <address>` first for the best results
-2. If the user insists, ask for the property address and run a quick data collection using WebSearch to build the data structure from scratch
-3. At minimum, run the equivalent of `/realestate quick <address>` to populate basic scores
+Pull from each file: project/address, property type, tenure, asking price, RM psf, beds/baths, built-up, land area (landed), year completed, maintenance fee, quit rent + assessment, composite score, grade, signal, category scores, transacted comps, estimated value, rent, yields, cash flow, school/connectivity, strategies, RPGT position, market classification, risks, recommendation, suggested offer (RM).
 
-### STEP 3: EXTRACT DATA FROM ANALYSIS FILES
-
-Read each found file and extract the key data points into a structured format.
-
-### STEP 4: BUILD THE JSON DATA STRUCTURE
-
-Assemble all extracted data into a structured JSON payload for the PDF generator.
+### STEP 4: BUILD THE DATA STRUCTURE
+Assemble extracted data into a structured payload for the generator (all amounts in RM).
 
 ### STEP 5: GENERATE THE PDF
 
-Run the PDF generation script:
+Run the script if present, else generate inline with ReportLab. Sections:
 
-```bash
-python3 ~/.claude/skills/realestate/scripts/generate_realestate_pdf.py
-```
-
-**If the script does not exist**, generate the PDF inline using Python and ReportLab. The inline script must produce a PDF with the following sections:
-
-#### PDF SECTIONS AND LAYOUT
-
-**Page 1: Cover Page**
-- Report title: "Property Analysis Report"
-- Property address (large, centered)
-- Property Score gauge (circular, color-coded: green 70+, yellow 40-69, red 0-39)
-- Grade and Signal displayed prominently
-- Report date
-- Disclaimer footer
-
-**Page 2: Property Overview**
-- Property details table (price, beds, baths, sqft, lot, year, type)
-- Executive summary (2-4 sentences)
-- Key findings list (bulleted, top 5)
-
-**Page 3: Comparable Sales Analysis**
-- Comp table: address, price, RM/psf, beds/baths, distance, sale date
-- Estimated value vs listing price
-- Over/under priced assessment with percentage
-
-**Page 4: Cash Flow Projections**
-- Rental income estimate
-- Monthly expense breakdown table
-- Net monthly cash flow (highlighted, green if positive, red if negative)
-- Key return metrics: Gross Yield, Net Yield, GRM
-- 3-scenario comparison (Conservative, Moderate, Optimistic)
-
-**Page 5: Neighborhood Scorecard**
-- School ratings with bar visualization
-- Safety rating
-- Expat demand assessment
-- Amenities & connectivity
-- Growth outlook
-
-**Page 6: Investment Analysis**
-- Category scores bar chart (all 5 categories)
-- Strategy comparison (Buy & Hold vs Renovate & Hold vs Flip)
-- Risk level assessment
-- RPGT considerations
-
-**Page 7: Market Conditions**
-- Market type indicator (buyer/seller/balanced)
-- Median PSF trends
-- Economic drivers
-- Supply pipeline assessment
-- MM2H impact
-
-**Page 8: Recommendation & Next Steps**
-- Overall recommendation (highlighted)
-- Signal with explanation
-- Key action items
-- Full disclaimer
+**Page 1 — Cover:** title, project/address, Property Score gauge (color-coded: green 70+, amber 40-69, red <40), grade + signal, date, disclaimer.
+**Page 2 — Overview:** property details table (price, RM psf, beds/baths, built-up, tenure, year, maintenance fee, quit rent + assessment), executive summary, top-5 key findings.
+**Page 3 — Comparable Sales:** transacted comps table (project, tenure, year, RM psf, price), value vs asking, over/under-priced %.
+**Page 4 — Cash Flow:** rent estimate, expense breakdown (maintenance + sinking fund, Cukai Pintu + Cukai Tanah, insurance, agent fee, CapEx), net cash flow (green/red), Gross & Net Yield, GRM, 3-scenario comparison.
+**Page 5 — Neighbourhood:** school access, MRT/highway connectivity, safety, amenities, expat demand, growth.
+**Page 6 — Investment:** category scores bar chart, strategy comparison (Buy & Hold / Renovate & Hold / Renovate & Resell), RPGT-by-year note, projections.
+**Page 7 — Market:** classification (buyers'/sellers'/balanced), NAPIC overhang, median RM psf trend, OPR, MM2H, foreign-buyer rules, outlook.
+**Page 8 — Recommendation:** signal, suggested offer (RM), contingencies (title search, sinking fund check, M&E inspection), next steps, full disclaimer.
 
 #### PDF STYLING
 
 | Element | Style |
 |---------|-------|
 | Colors | Navy (#1B2A4A) headers, dark gray (#333) body, green (#2E7D32) positive, red (#C62828) negative |
-| Fonts | Helvetica-Bold for headers, Helvetica for body |
-| Score gauges | Circular arc gauges with color gradient (red -> yellow -> green) |
-| Tables | Alternating row colors (white/#F5F5F5), navy header row |
-| Charts | Horizontal bar charts for category scores and comparisons |
-| Footer | Page numbers, disclaimer, generation date |
-| Margins | 50pt top, 40pt sides, 50pt bottom |
+| Fonts | Helvetica-Bold headers, Helvetica body |
+| Score gauges | Semi-circular arc, color gradient red→amber→green |
+| Tables | Alternating rows (white/#F5F5F5), navy header row |
+| Currency | Always **RM**, thousands separators |
+| Footer | Page numbers, disclaimer, date |
 
-### STEP 6: VERIFY AND DELIVER
-
-After PDF generation confirm:
-- File name and location
-- File size
-- Number of pages
-- Which data sources were included
+### STEP 6: VERIFY & DELIVER
+Confirm file name, size, page count, and which PROPERTY-*.md sources were used. Note any data gaps.
 
 ---
 
@@ -182,28 +103,26 @@ After PDF generation confirm:
 
 | Spec | Value |
 |------|-------|
-| File name | `PROPERTY-REPORT.pdf` (or `PROPERTY-REPORT-[ADDRESS].pdf` if address specified) |
-| Page size | Letter (8.5" x 11") |
+| File name | `PROPERTY-REPORT.pdf` (or `PROPERTY-REPORT-[NAME].pdf`) |
+| Page size | A4 (Malaysian standard) — Letter acceptable |
 | Orientation | Portrait |
-| Pages | 6-10 depending on available data |
-| File size | Typically 200KB - 1MB |
-| Python dependency | ReportLab (`pip install reportlab` if not installed) |
+| Pages | 6-10 |
+| Dependency | ReportLab (`pip install reportlab`) |
 
 ---
 
 ## RULES
 
-1. **Professional quality** — The PDF must look like it came from a real estate analytics firm
-2. **Data-driven** — Every number in the PDF must come from the analysis files or live research; never fabricate data
-3. **Conservative estimates** — Use the same conservative projections from the analysis files
-4. **Complete disclaimer** — Full disclaimer must appear on the cover page and the last page
-5. **Graceful degradation** — If some analysis files are missing, mark missing sections as "Not analyzed"
-6. **Install dependencies** — If ReportLab is not installed, install it automatically
-7. **Color-coded scores** — All scores must be color-coded: green (70+), yellow (40-69), red (0-39)
+1. **Professional quality** — looks like a real estate analytics firm deliverable
+2. **Data-driven** — every number from analysis files or live research; never fabricate
+3. **Conservative estimates** — match the analysis files
+4. **Complete disclaimer** — on cover and last page
+5. **Graceful degradation** — mark missing sections "Not analyzed"
+6. **Install dependencies** — auto `pip install reportlab` if needed
+7. **Color-coded scores** — green 70+, amber 40-69, red <40
+8. **RM throughout** — never use `$`; use RM and RM psf
 
 ## DEPENDENCY INSTALLATION
-
-If ReportLab is not available, install it:
 
 ```bash
 pip install reportlab 2>/dev/null || pip3 install reportlab 2>/dev/null
@@ -211,4 +130,4 @@ pip install reportlab 2>/dev/null || pip3 install reportlab 2>/dev/null
 
 ---
 
-**DISCLAIMER: For educational/research purposes only. Not financial or investment advice. All estimates are AI-generated approximations based on publicly available data. Always verify with licensed professionals and conduct your own due diligence before making any purchase or investment decisions.**
+**DISCLAIMER: For educational/research purposes only. Not financial or investment advice. All estimates are AI-generated approximations based on publicly available data. Always verify with licensed professionals (BOVAEP-registered REN/REA) before making any purchase or investment decisions.**
