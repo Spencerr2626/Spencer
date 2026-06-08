@@ -47,6 +47,8 @@ Skills are built **organically** — when you notice the same request repeating,
 
 Domain and style rules live in `.claude/rules/` and apply automatically. Follow them.
 
+**All real-estate skills default to the Malaysian market.** When Spencer pastes any property/real-estate skill (now or in future), localize it to Malaysia before committing — see `.claude/rules/realestate-localization.md`. No need to ask.
+
 ## Decision Log
 
 Meaningful decisions go in `decisions/log.md` — **append-only**. Never edit or delete past entries.
