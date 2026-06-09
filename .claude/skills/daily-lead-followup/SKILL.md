@@ -19,11 +19,22 @@ The CRM is `references/crm/Spencer_Kommons_CRM_v3.xlsx`. Run the helper (it need
 ```bash
 python3 .claude/skills/daily-lead-followup/triage.py
 ```
-
 - Defaults to today in **GMT+8** and a **+2 day** horizon.
 - Override with `--date YYYY-MM-DD` (e.g. to plan ahead) or `--horizon N`.
 
 The script outputs three buckets — **⚠️ OVERDUE**, **📌 DUE TODAY**, **🔜 UPCOMING** — sorted Hot → Warm → Cold, each with purpose, next action, appointment, and context pulled from both the Follow-Up Schedule and Active Leads sheets.
+
+### Also run the Lease Radar (every morning)
+
+Spencer asked to be notified when **tenancy renewals** and **check-ins / move-ins** are around the corner. Run this alongside the triage so it surfaces automatically in the morning brief:
+
+```bash
+python3 .claude/skills/daily-lead-followup/lease_radar.py
+```
+
+- Reads lease Start/End from **✅ Done Deals** and VP/Move-in from **💰 Pipeline & Deals**.
+- Buckets: **⚠️ Just expired** (confirm renewed/vacated), **🔁 Renewals due** (≤60d), **🔑 Check-ins/Move-ins** (≤30d).
+- Surface anything that appears — a lease ending = renewal commission + a possible new listing; a check-in = make sure the move-in goes smoothly. Offer to prep the renewal TA or a check-in reminder.
 
 ## Step 2 — Present the priority list
 
