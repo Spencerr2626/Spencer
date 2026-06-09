@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:francis-sunwaykiarahills-20260611@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260611T160000
+DTEND;TZID=Asia/Kuala_Lumpur:20260611T163000
+SUMMARY:Viewing 1/4 — 119 Sunway Kiara Hills (Datuk Francis)
+LOCATION:119 Sunway Kiara Hills
+DESCRIPTION:Datuk Francis viewing.\n119 Sunway Kiara Hills — B/U 4983sf / L/A 1765sf / 5+1 bed / 6 bath / partly furnished.\nAsking RM4.5mil.\nMap: https://maps.app.goo.gl/vqMYsXc5ev7a7YzZ6
+BEGIN:VALARM
+TRIGGER:-PT45M
+ACTION:DISPLAY
+DESCRIPTION:Datuk Francis viewing route starts soon
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:francis-hartamas-land6500-20260611@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260611T163000
+DTEND;TZID=Asia/Kuala_Lumpur:20260611T170000
+SUMMARY:Viewing 2/4 — Hartamas Heights Bungalow Land 6,500sf (Datuk Francis)
+LOCATION:Hartamas Heights
+DESCRIPTION:Bungalow LAND — 6,500 sf. Asking RM6.18mil.\nCo-agent: Caydence +60 10-246 2822.\nMap: https://maps.app.goo.gl/P7jxFi5eDKFKUZo8A
+END:VEVENT
+BEGIN:VEVENT
+UID:francis-hartamas-bungalow18m-20260611@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260611T170000
+DTEND;TZID=Asia/Kuala_Lumpur:20260611T173000
+SUMMARY:Viewing 3/4 — Hartamas Heights Bungalow RM18m (Datuk Francis)
+LOCATION:Hartamas Heights
+DESCRIPTION:Bungalow — L/A 9,795 sf / B/U 15,127 sf / 7 bed / 8 bath / partly furnished.\nAsking RM18mil.\nCo-agent: Teoh.\nMap: https://maps.app.goo.gl/P7jxFi5eDKFKUZo8A
+END:VEVENT
+BEGIN:VEVENT
+UID:francis-hartamas-land17997-20260611@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260611T173000
+DTEND;TZID=Asia/Kuala_Lumpur:20260611T180000
+SUMMARY:Viewing 4/4 — Hartamas Heights Bungalow Land 17,997sf (Datuk Francis)
+LOCATION:Hartamas Heights
+DESCRIPTION:Bungalow LAND — 17,997 sf. Asking RM11mil.\nCo-agent: Kelvin Moh +60 19-521 5527.\nMap: https://maps.app.goo.gl/P7jxFi5eDKFKUZo8A
+END:VEVENT
+END:VCALENDAR
