@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:norain-astrea1207-showing-yoon-20260610@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260610T140000
+DTEND;TZID=Asia/Kuala_Lumpur:20260610T143000
+SUMMARY:Showing — Astrea MK 12-07 to Ms Yoon (Korean tenant)
+LOCATION:Residensi Astrea, Mont Kiara
+DESCRIPTION:Show Astrea Mont Kiara Unit 12-07 (master rental listing, RM7,500/mo) to prospective Korean tenant Ms Yoon.\nCo-agent (tenant side): Kenie Yow.\nOwner: Ms Norain.
+BEGIN:VALARM
+TRIGGER:-PT45M
+ACTION:DISPLAY
+DESCRIPTION:Astrea 12-07 showing to Ms Yoon in 45 min
+END:VALARM
+END:VEVENT
+END:VCALENDAR
