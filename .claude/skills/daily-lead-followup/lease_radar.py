@@ -62,6 +62,10 @@ def main():
         name = dd.cell(r, 2).value
         if not name:
             continue
+        # Skip tenants who have already moved out / vacated — not a renewal.
+        status = str(dd.cell(r, 10).value or "").lower()
+        if any(k in status for k in ("moved out", "vacated", "terminated")):
+            continue
         prop = dd.cell(r, 16).value or ""
         unit = dd.cell(r, 17).value or ""
         where = f"{prop} {unit}".strip()
