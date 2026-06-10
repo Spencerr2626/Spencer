@@ -11,8 +11,8 @@
 | Tenure | **Freehold / Leasehold** (state years remaining) — first-class field |
 | Data sources | **PropertyGuru, iProperty, EdgeProp, brickz.my (transacted), StarProperty, NAPIC/JPPH, Bank Negara Malaysia (BNM)** — prefer transacted over asking |
 | Markets | Klang Valley / KL default: **Mont Kiara, KLCC, Damansara Heights, Desa ParkCity, Sri Hartamas, Bangsar**; adapt to other MY locations as given |
-| Taxes | **RPGT** (citizens: 30/20/30/20% Yr1-3, 15% Yr4, 10% Yr5, **0% from Yr6**; higher for foreigners/companies), **MOT stamp duty** (1/2/3/4% progressive, +4-8% foreign surcharge 2026), **loan stamp duty 0.5%**, **Cukai Pintu** (assessment) + **Cukai Tanah** (quit rent), **6% SST on commercial rent** |
-| Foreign buyers | **RM 1,000,000 minimum** purchase (KL), **MM2H** tiers/eligibility, foreign stamp-duty surcharge |
+| Taxes | **RPGT** (citizens: 30/20/30/20% Yr1-3, 15% Yr4, 10% Yr5, **0% from Yr6**; higher for foreigners/companies), **MOT stamp duty** (1/2/3/4% progressive, **+8% foreign surcharge** as of 2026), **loan stamp duty 0.5%**, **Cukai Pintu** (assessment) + **Cukai Tanah** (quit rent), **6% SST on commercial rent** |
+| Foreign buyers | **RM 1,000,000 minimum** purchase (KL), **MM2H** tiers/eligibility, **foreign MOT stamp duty surcharge = 8%** (confirmed 2026 — on top of standard 1/2/3/4% progressive rate) |
 | Yields | **Gross & Net rental yield** for residential (cap rate OK for commercial) |
 | Financing | **BNM OPR-linked**, ~4.3-4.5% p.a., **70-90% margin of finance**, 30-35 yr |
 | Connectivity | **MRT/LRT/monorail** distance + highways (SPRINT, LDP, DUKE, NKVE, MEX, Penchala Link) |

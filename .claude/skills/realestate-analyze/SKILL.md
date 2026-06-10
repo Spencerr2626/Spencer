@@ -73,7 +73,7 @@ WebSearch("<project name> brickz transactions OR StarProperty review")
 - **SOHO / Small units** — short-stay/Airbnb regulation risk, high density, yield play
 - **Commercial (shoplot / office / retail)** — hand off to `realestate-commercial`
 - **Land** — zoning (kategori kegunaan tanah), conversion, infrastructure, Bumi status
-- **Foreign-buyer angle** — flag the RM 1,000,000 minimum purchase threshold for foreigners in KL, MM2H eligibility, and the 4–8% foreign-buyer stamp duty (effective 2026)
+- **Foreign-buyer angle** — flag the RM 1,000,000 minimum purchase threshold for foreigners in KL, MM2H eligibility, and the 8% foreign-buyer stamp duty (effective 2026)
 
 If a critical data point is missing, mark it "Not Available" and instruct subagents to work with what is known.
 
@@ -199,7 +199,7 @@ PROPERTY PROFILE:
 
 INSTRUCTIONS — research appreciation trends (brickz/EdgeProp/NAPIC) and Malaysia outlook, then analyze:
 
-ACQUISITION COSTS (model these): Stamp duty on MOT (progressive 1%/2%/3%/4%, +4-8% surcharge if foreign buyer 2026), loan stamp duty (0.5% of loan), legal fees (SPA + loan), valuation. Note RM 1M foreign minimum + MM2H angle.
+ACQUISITION COSTS (model these): Stamp duty on MOT (progressive 1%/2%/3%/4%, +8% surcharge if foreign buyer 2026), loan stamp duty (0.5% of loan), legal fees (SPA + loan), valuation. Note RM 1M foreign minimum + MM2H angle.
 
 STRATEGY 1 — BUY & HOLD: appreciation (use local historical %), equity buildup (70% margin, ~4.3-4.5%, 30-35 yr), total return incl. RPGT (Real Property Gains Tax) — citizens: 30/20/30/20% Yr1-3, 15% Yr4, 10% Yr5, **0% from Year 6**; flag higher rates for foreigners/companies. Break-even timeline.
 
@@ -234,7 +234,7 @@ INSTRUCTIONS — research (use latest year data via WebSearch):
 2. PRICING TRENDS: Median transacted RM psf trend (3 yrs), Malaysian House Price Index (NAPIC/JPPH), is the submarket rising/flat/declining
 3. DEMAND: Days on market, rental occupancy, transaction volume, expat/foreign demand drivers
 4. MACRO: Malaysia GDP, BNM Overnight Policy Rate (OPR) and mortgage rates, MYR trend, inflation
-5. FOREIGN BUYER POLICY: RM 1M minimum (KL), 4-8% foreign stamp duty (2026), MM2H programme tiers & latest rules and uptake
+5. FOREIGN BUYER POLICY: RM 1M minimum (KL), 8% foreign stamp duty (2026), MM2H programme tiers & latest rules and uptake
 6. COMPETING SUPPLY: Notable nearby launches that compete
 
 Market classification (Buyers'/Sellers'/Balanced — may differ sales vs rental).

@@ -42,7 +42,7 @@ Gather: prevailing effective rates (conventional floating, full-flexi, Islamic p
 
 **Search 2 — Transaction Costs**
 `"Malaysia 2026 MOT stamp duty legal fees home purchase first time buyer exemption assessment quit rent <AREA>"`
-Gather: MOT (instrument of transfer) stamp duty (progressive 1/2/3/4%), loan agreement stamp duty (0.5% of loan), legal fees (SPA + loan, scaled), valuation fee, disbursements, **first-home stamp-duty exemptions** (if currently in force), foreign-buyer surcharge (4-8%, 2026), local assessment & quit rent.
+Gather: MOT (instrument of transfer) stamp duty (progressive 1/2/3/4%), loan agreement stamp duty (0.5% of loan), legal fees (SPA + loan, scaled), valuation fee, disbursements, **first-home stamp-duty exemptions** (if currently in force), foreign-buyer surcharge (8%, 2026), local assessment & quit rent.
 
 **Search 3 — Rental Market (Rent vs Buy)**
 `"<AREA> average rent condo <bedrooms> 2026"`
