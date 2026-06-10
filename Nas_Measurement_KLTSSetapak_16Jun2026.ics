@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:nas-kenangan-measurement-kltssetapak-20260616@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260616T110000
+DTEND;TZID=Asia/Kuala_Lumpur:20260616T120000
+SUMMARY:Measurement — Nas / Kenangan Coffee @ 51-G-1 KLTS Setapak
+LOCATION:51-G-1 KLTS Setapak
+DESCRIPTION:Nas (Kenangan Coffee) viewing with his team for measurement at 51-G-1 KLTS Setapak (Patrick Chow's unit).\nOffer on table: RM8,500 (yr1) / RM9,000 (yr2-3), 3+3 yrs, as-is. Reno-period gap to close (15 days vs 1 month).
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Nas/Kenangan measurement at KLTS Setapak in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
