@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""PDF for Verve Suites dual-unit investment analysis: 462 sq ft vs 633 sq ft."""
+"""PDF for Verve Suites dual-unit investment analysis: 462 sq ft vs 633 sq ft.
+Corrected: maintenance fee RM 0.67 psf/mo (not 0.33).
+"""
 
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
@@ -121,9 +123,9 @@ def build():
     e.append(sub); e.append(sp(20))
 
     # score bars on cover
-    for lbl, sc in [("Studio 462 sq ft — Buy & Hold", 67), ("Studio 462 sq ft — BRRRR", 55),
-                    ("Studio 462 sq ft — Composite", 62), ("1-Bed 633 sq ft — Buy & Hold", 62),
-                    ("1-Bed 633 sq ft — BRRRR (@RM450K)", 63), ("1-Bed 633 sq ft — Composite", 60)]:
+    for lbl, sc in [("Studio 462 sq ft — Buy & Hold", 64), ("Studio 462 sq ft — BRRRR", 53),
+                    ("Studio 462 sq ft — Composite", 60), ("1-Bed 633 sq ft — Buy & Hold", 58),
+                    ("1-Bed 633 sq ft — BRRRR (@RM450K)", 60), ("1-Bed 633 sq ft — Composite", 57)]:
         e.append(ScoreBar(lbl, sc, width=400))
         e.append(sp(4))
 
@@ -152,7 +154,7 @@ def build():
         ["Distressed / Low Ask", "RM 365,000 (RM 790 psf)", "RM 450,000 (RM 711 psf) ← below median"],
         ["High Ask", "RM 480,000 (RM 1,039 psf)", "RM 680,000 (RM 1,074 psf)"],
         ["Target Entry (median)", "~RM 400,000 (RM 866 psf)", "~RM 548,000 (RM 866 psf)"],
-        ["Maintenance Fee", "RM 152/mo (RM 0.33 psf)", "RM 209/mo (RM 0.33 psf)"],
+        ["Maintenance Fee + Sinking Fund", "RM 309/mo (RM 0.67 psf) ★corrected", "RM 424/mo (RM 0.67 psf) ★corrected"],
         ["Typical Rent (as-is)", "RM 1,800–2,000/mo", "RM 2,300–2,500/mo"],
         ["Typical Rent (furnished)", "RM 2,000–2,200/mo", "RM 2,400–2,700/mo"],
     ]
@@ -174,17 +176,17 @@ def build():
     e += sec("Head-to-Head Strategy Dashboard", st)
     dash = [
         ["Metric", "Studio 462 sq ft", "1-Bed 633 sq ft"],
-        ["Buy & Hold Score", "67/100", "62/100"],
-        ["BRRRR Score", "55/100", "63/100 (@ RM 450K)"],
+        ["Buy & Hold Score", "64/100", "58/100"],
+        ["BRRRR Score", "53/100", "60/100 (@ RM 450K)"],
         ["Flip Score", "38/100", "42/100"],
-        ["Composite Investment Score", "62/100", "60/100"],
+        ["Composite Investment Score", "60/100", "57/100"],
         ["Target Entry", "RM 400,000", "RM 548,000"],
         ["Cash Required (90% MOF, 1st/2nd)", "~RM 57,000", "~RM 78,000"],
         ["Cash Required (70% MOF, 3rd+)", "~RM 130,000", "~RM 178,000"],
         ["Monthly Instalment (4.4%, 35yr)", "RM 1,680", "RM 2,303"],
         ["Gross Rental Yield", "5.7%", "5.3%"],
-        ["Net Rental Yield", "3.8%", "3.4%"],
-        ["Monthly Top-up (90% MOF, Yr1)", "RM 419", "RM 737"],
+        ["Net Rental Yield (corrected)", "3.3%", "2.96%"],
+        ["Monthly Top-up (90% MOF, Yr1)", "RM 576", "RM 953"],
         ["10-yr Appreciation Gain", "RM 112,000", "RM 153,500"],
         ["Winner on:", "Yield% & cash efficiency", "Absolute return & tenant pool"],
     ]
@@ -239,14 +241,14 @@ def build():
         ["Gross Monthly Rent", "RM 1,900", "RM 2,100", "RM 2,400", "RM 2,650"],
         ["Gross Annual Rent", "RM 22,800", "RM 25,200", "RM 28,800", "RM 31,800"],
         ["Vacancy (7%)", "–RM 1,596", "–RM 1,764", "–RM 2,016", "–RM 2,226"],
-        ["Maintenance Fee", "–RM 1,827", "–RM 2,000", "–RM 2,507", "–RM 2,740"],
+        ["Maint Fee+SF (RM 0.67psf) ★", "–RM 3,714", "–RM 3,714", "–RM 5,089", "–RM 5,089"],
         ["CapEx / Repairs (5%)", "–RM 1,140", "–RM 1,260", "–RM 1,440", "–RM 1,590"],
         ["Insurance + Assessment + QR", "–RM 1,200", "–RM 1,200", "–RM 1,650", "–RM 1,650"],
         ["Agent Fee (renewal)", "–RM 1,900", "–RM 2,100", "–RM 2,400", "–RM 2,650"],
-        ["NOI", "RM 15,137", "RM 16,876", "RM 18,787", "RM 20,944"],
+        ["NOI", "RM 13,250", "RM 15,162", "RM 16,205", "RM 18,595"],
         ["Mortgage Instalment", "–RM 20,160", "–RM 20,160", "–RM 27,636", "–RM 27,636"],
-        ["NET CASH FLOW", "–RM 5,023", "–RM 3,284", "–RM 8,849", "–RM 6,692"],
-        ["Monthly Top-up", "RM 419/mo", "RM 274/mo", "RM 737/mo", "RM 558/mo"],
+        ["NET CASH FLOW", "–RM 6,910", "–RM 4,998", "–RM 11,431", "–RM 9,041"],
+        ["Monthly Top-up", "RM 576/mo", "RM 417/mo", "RM 953/mo", "RM 753/mo"],
     ]
     cft = Table(cf, colWidths=[4.5*cm, 2.8*cm, 2.8*cm, 2.8*cm, 2.8*cm])
     cft.setStyle(TableStyle([
@@ -264,8 +266,8 @@ def build():
     e.append(cft)
     e.append(sp(4))
     e.append(Paragraph(
-        "Studio gross yield 5.7% / net 3.8% — 1-bed gross 5.3% / net 3.4%. "
-        "Both run negative leveraged CF at 90% MOF — normal for Mont Kiara. Studio top-up is half the 1-bed's.",
+        "Studio gross yield 5.7% / net 3.3% (corrected) — 1-bed gross 5.3% / net 2.96% (below 3%). "
+        "Both negative leveraged CF at 90% MOF. At RM 0.67 psf, maintenance is RM 309–424/mo — major carry cost.",
         st["small"]
     ))
 
@@ -278,8 +280,8 @@ def build():
         ["Principal Paydown", "RM 14,500", "RM 19,800"],
         ["RPGT (0% — Yr7 exit)", "RM 0", "RM 0"],
         ["Selling Costs (~4%)", "–RM 19,400", "–RM 25,900"],
-        ["NET TOTAL RETURN", "~RM 31,700", "~RM 29,100"],
-        ["Annualized ROI on Cash", "~7.9%", "~5.3%"],
+        ["NET TOTAL RETURN", "~RM 17,100", "~RM 9,300"],
+        ["Annualized ROI on Cash", "~4.3%", "~1.7%"],
     ]
     rt = Table(ret, colWidths=[6.5*cm, 4.5*cm, 4.5*cm])
     rt.setStyle(TableStyle([
