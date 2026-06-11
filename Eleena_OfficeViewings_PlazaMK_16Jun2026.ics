@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eleena-plazamk-blockb-20260616@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260616T140000
+DTEND;TZID=Asia/Kuala_Lumpur:20260616T143000
+SUMMARY:Office viewing 1/2 — Plaza MK Block B (Eleena)
+LOCATION:Plaza Mont Kiara, Block B
+DESCRIPTION:Eleena (law firm) office viewing.\nPlaza MK Block B — 750 sf, partly furnished, RM3,000/mo.\nCo-agent: Sherena Loh +60 12-632 8583.
+BEGIN:VALARM
+TRIGGER:-PT45M
+ACTION:DISPLAY
+DESCRIPTION:Eleena office viewings start soon
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eleena-plazamk-blocke-20260616@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260616T143000
+DTEND;TZID=Asia/Kuala_Lumpur:20260616T150000
+SUMMARY:Office viewing 2/2 — Plaza MK Block E (Eleena)
+LOCATION:Plaza Mont Kiara, Block E
+DESCRIPTION:Eleena (law firm) office viewing.\nPlaza MK Block E — 800 sf, partly furnished, RM2,800/mo.\nCo-agent: Kate +60 12-217 8588.
+END:VEVENT
+END:VCALENDAR
