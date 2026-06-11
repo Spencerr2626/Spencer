@@ -84,7 +84,7 @@ Property Investment Profile:
 | Interest Rate | ~4.3-4.5% |
 | Loan Tenure | 30-35 years (or up to age 70) |
 | Monthly Instalment | RM [X] |
-| Stamp Duty (MOT, 1/2/3/4% progressive) | RM [X] (+8% if foreign) |
+| Stamp Duty (MOT, 1/2/3/4% progressive) | RM [X] (+4-8% if foreign) |
 | Loan Stamp Duty (0.5% of loan) | RM [X] |
 | Legal Fees (SPA + loan) | RM [X] |
 | Immediate Repairs (if any) | RM [X] |

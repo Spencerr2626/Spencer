@@ -110,7 +110,7 @@ Always factor these national settings into the local read:
 - **BNM OPR** and mortgage rates (~4.3-4.5%); direction & impact on affordability
 - **Margin of finance** rules (90% for 1st/2nd property; **70% cap for 3rd+**) — dampens multi-property investor demand
 - **RPGT** schedule (0% for citizens from Year 6) — affects holding behaviour & flip viability
-- **Foreign-buyer policy** — **RM 1,000,000 minimum** (varies by state; some states higher), **8% foreign stamp-duty surcharge (2026)**, state consent requirement
+- **Foreign-buyer policy** — **RM 1,000,000 minimum** (varies by state; some states higher), **4-8% foreign stamp-duty surcharge (2026)**, state consent requirement
 - **MM2H** — current tiers/rules and uptake; a real luxury-demand catalyst in KL/Penang/JB
 - **MYR trend** — affects foreign (esp. China) buyer purchasing power
 - **Stamp duty / SST / cooling or stimulus measures** — note any current Budget measures (e.g. exemptions for first-time buyers)

@@ -87,7 +87,7 @@ Break the reno into categories with Cosmetic / Mid / Full estimates. (Indicative
 ```
 PURCHASE
   Purchase Price:                 RM [PRICE]
-  Stamp Duty (MOT, 1/2/3/4%):     RM [AMOUNT]   (+8% surcharge if foreign buyer)
+  Stamp Duty (MOT, 1/2/3/4%):     RM [AMOUNT]   (+4-8% surcharge if foreign buyer)
   Legal Fees (SPA + loan):        RM [AMOUNT]
   Loan Stamp Duty (0.5% of loan): RM [AMOUNT]
   Total Acquisition:              RM [TOTAL]
@@ -189,7 +189,7 @@ Also include a **"Hold past Year 5" comparison row** — same property sold afte
 7. **Regulatory** — local council renovation permit, strata by-laws (Act 757), BOMBA for major works, structural alteration approval
 8. **Structural Surprises** — concrete cancer, leaks, termites, old wiring, illegal extensions (landed)
 9. **Financing Risk** — bridging cost; buyer's loan margin/approval risk on resale
-10. **Foreign-buyer constraints** — if targeting foreign buyers on exit: RM 1M minimum, 8% foreign stamp duty dampens demand
+10. **Foreign-buyer constraints** — if targeting foreign buyers on exit: RM 1M minimum, 4-8% foreign stamp duty dampens demand
 
 ---
 
