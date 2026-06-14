@@ -32,6 +32,7 @@ Five sheets, all keyed by a stable ID:
 - **Always resolve IDs to real names** when referring to a lead — never surface a bare `L###` without the name.
 - **Don't invent data.** If a field (phone, language, source, status, budget) is missing, flag it rather than guessing.
 - **Preserve the schema** — when editing the workbook, keep columns, sheet names, and tag formats exactly as above.
+- **Keep Active Leads compact** — when a lead is removed (e.g., converted to a Done Deal), shift rows up so there are no blank gaps in the list, and update the Dashboard counts to match.
 
 ## Follow-Up
 

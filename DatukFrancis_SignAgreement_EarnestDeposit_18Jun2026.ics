@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:francis-finalview-sign-earnest-20260618@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260618T180000
+DTEND;TZID=Asia/Kuala_Lumpur:20260618T190000
+SUMMARY:Datuk Francis — Final Viewing + Sign Agreement + Earnest Deposit (Hartamas land)
+LOCATION:Hartamas Heights
+DESCRIPTION:Datuk Francis — 6,500 sq ft Hartamas Heights bungalow land (RM865 psf / RM5,622,500).\nFinal viewing, sign the Agreement to Purchase, and collect the earnest deposit cheque. Then proceed to SPA.\nCo-broke 50/50 with Caydence — Spencer's share RM56,225.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Datuk Francis signing + earnest deposit today 6pm
+END:VALARM
+END:VEVENT
+END:VCALENDAR
