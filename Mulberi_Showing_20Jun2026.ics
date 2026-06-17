@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mulberi-showing-buyer-20260620@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260620T100000
+DTEND;TZID=Asia/Kuala_Lumpur:20260620T110000
+SUMMARY:Mulberi Showing — buyer for Datuk's units (13A-02 / 13A-03A)
+LOCATION:Mulberi
+DESCRIPTION:Showing Datuk Francis's units for sale — 13A-02 & 13A-03A Mulberi (RM420k each) to a purchaser brought by co-agent Caydence.\nCo-broke 50/50; Spencer share 1% = RM4,200/unit.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Mulberi showing in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
