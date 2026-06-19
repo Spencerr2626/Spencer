@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:francis-loandocs-ocbc-20260622@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260622T110000
+DTEND;TZID=Asia/Kuala_Lumpur:20260622T120000
+SUMMARY:Meet Datuk Francis — Loan Docs + OCBC Loan Application
+LOCATION:Kuala Lumpur
+DESCRIPTION:Meet Datuk Francis to collect bank loan documents and fill in the OCBC loan application form (for the Hartamas Heights land purchase, RM5,622,500). Step toward financing before SPA.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Datuk Francis — loan docs + OCBC application in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
