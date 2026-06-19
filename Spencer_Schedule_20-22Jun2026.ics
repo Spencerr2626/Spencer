@@ -1,0 +1,58 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mulberi-showing-20260620@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260620T100000
+DTEND;TZID=Asia/Kuala_Lumpur:20260620T110000
+SUMMARY:Mulberi Showing — buyer for Datuk's units (13A-02 / 13A-03A)
+LOCATION:Mulberi
+DESCRIPTION:Datuk's units for sale (RM420k each) to a buyer via co-agent Caydence; buyer wants one. 3% comm co-broke 50/50; Spencer share 1.5% = RM6,300.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Mulberi showing in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ingo-thao-viewing-20260620@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260620T143000
+DTEND;TZID=Asia/Kuala_Lumpur:20260620T163000
+SUMMARY:Ingo & Ms Thao — MK Viewing (Hijauan Kiara / Kiara 9 / Kiara 1888)
+LOCATION:Mont Kiara
+DESCRIPTION:From 2:30pm — Hijauan Kiara (Jln Kiara 5, Lvl 18) 2,200sf RM1.6m; Kiara 9 Residency (Jln Kiara 3) 2,500sf RM1.5m; Kiara 1888 (Jln Kiara 3) 1,927sf FF RM1.1m. Buyers Ingo & Ms Thao (budget RM1.8m).
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Ingo & Thao viewing in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:makayla-handover-20260621@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260621T150000
+DTEND;TZID=Asia/Kuala_Lumpur:20260621T160000
+SUMMARY:Handover — Makayla @ Inspirasi A-12-06
+LOCATION:Inspirasi, A-12-06
+DESCRIPTION:Tenant handover / check-in for Makayla at Inspirasi A-12-06 (lease start 20/06/2026).
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Makayla handover in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:stephanie-ooaksuites-20260622@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260622T100000
+DTEND;TZID=Asia/Kuala_Lumpur:20260622T110000
+SUMMARY:Showing — Stephanie @ Ooak Suites (co-agent Cindy)
+LOCATION:Ooak Suites
+DESCRIPTION:Showing Ooak Suites to Stephanie (tenant, ~RM6k/mo) — co-agent Cindy. She viewed Astrea 20-01 earlier; compare options.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Stephanie Ooak Suites showing in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
