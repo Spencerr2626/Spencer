@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kimjungju-checkout-astrea3006-20260630@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260630T093000
+DTEND;TZID=Asia/Kuala_Lumpur:20260630T103000
+SUMMARY:Check-out — Kim Jungju @ Astrea 30-06 (Zoey's unit)
+LOCATION:Residensi Astrea, Mont Kiara, 30-06
+DESCRIPTION:Tenant Kim Jungju checks out of Astrea 30-06 (Zoey Lim's unit, 1,364 sf). Unit then available to re-let @ RM6,000/mo. Inspect on hand-back.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Kim Jungju check-out @ Astrea 30-06 in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jinya-checkin-met1-c2009-20260630@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260630T130000
+DTEND;TZID=Asia/Kuala_Lumpur:20260630T140000
+SUMMARY:Check-in — Jinya San @ Met 1 Residences C-20-09
+LOCATION:Met 1 Residences, C-20-09
+DESCRIPTION:Tenant Jinya San check-in at Met 1 Residences C-20-09. Tenancy 01/07/2026 - 30/06/2028 (2 yrs). Co-agent: Wei Young.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Jinya San check-in @ Met 1 C-20-09 in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
