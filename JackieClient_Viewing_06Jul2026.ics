@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:jackieclient-viewing-20260706@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260706T140000
+DTEND;TZID=Asia/Kuala_Lumpur:20260706T153000
+SUMMARY:Viewing — Jackie's Japanese client (Astrea 21-06 / Kiaraville B-6-1)
+LOCATION:Mont Kiara
+DESCRIPTION:Co-agent Jackie's Japanese client (budget RM1.5m) viewing 2 MK units:\n- 21-06 Astrea — asking RM1.45mil\n- B-6-1 Kiaraville — asking RM1.47mil\nCo-agent: Jackie. NOTE: confirm time (placeholder 2pm).
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Jackie client viewing in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
