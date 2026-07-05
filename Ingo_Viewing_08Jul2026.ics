@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ingo-hijauankiara-c82-20260708@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260708T100000
+DTEND;TZID=Asia/Kuala_Lumpur:20260708T103000
+SUMMARY:Viewing — Ingo & Thao @ Hijauan Kiara C-8-2
+LOCATION:Hijauan Kiara, Mont Kiara, C-8-2
+DESCRIPTION:Ingo & Ms Thao viewing Hijauan Kiara unit C-8-2 (their front-runner; open balcony). Budget ~RM1.8m.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Ingo viewing @ Hijauan Kiara in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ingo-trinitypentamont-20260708@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260708T103000
+DTEND;TZID=Asia/Kuala_Lumpur:20260708T110000
+SUMMARY:Viewing — Ingo & Thao @ Trinity Pentamont (Lvl 2)
+LOCATION:Trinity Pentamont, Mont Kiara
+DESCRIPTION:Ingo & Ms Thao viewing Trinity Pentamont, Level 2 — asking RM1.75m (below market, iProperty). Open balcony.
+END:VEVENT
+END:VCALENDAR
