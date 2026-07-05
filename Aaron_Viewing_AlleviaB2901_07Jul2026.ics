@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:aaron-viewing-alleviab2901-20260707@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260707T140000
+DTEND;TZID=Asia/Kuala_Lumpur:20260707T150000
+SUMMARY:Viewing — Aaron @ Allevia B-29-01 (Sharavana's unit)
+LOCATION:Allevia, Mont Kiara, B-29-01
+DESCRIPTION:Aaron viewing Allevia B-29-01 (Sharavana's unit) — 3BR, RM9,500/mo. Matched tenant for landlord Sharavana. Aaron budget RM8-12k/mo.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Aaron viewing @ Allevia B-29-01 in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
