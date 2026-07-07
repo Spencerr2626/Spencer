@@ -34,18 +34,39 @@ Skills are built **organically** — when you notice the same request repeating,
 - **daily-lead-followup** — reads the CRM and surfaces who to follow up with today (Hot → Warm → Cold) + drafts a message per lead in their language. `.claude/skills/daily-lead-followup/`
 - **listing-proposal** — generate a branded Kommons "Property Showing Route" proposal deck (PDF) from property specs + photos. Cover → detail + photos page per property → contact back cover. `.claude/skills/listing-proposal/`
 
+#### `/realestate` suite (all Malaysia-localized — RM, freehold/leasehold, RPGT, MM2H, MOF, NAPIC, SBR)
+
+The AI Real Estate Analyst toolkit. Data sources: PropertyGuru, iProperty, EdgeProp, brickz (transacted), NAPIC, BNM, DOSM. Each folder `.claude/skills/realestate-<name>/`.
+
+- **realestate-analyze** — full analysis; runs 5 parallel subagents → composite Property Score (0-100), grade, recommendation.
+- **realestate-quick** — 60-second snapshot (terminal only, no file); fast signal + verdict.
+- **realestate-screen** — property screener: Cash-Flow, Appreciation, BRRRR, First-Home, STR, **Expat-Tenant/Foreign-Buyer**, or custom.
+- **realestate-comps** — comparable-transaction valuation (fair value + Comps Score).
+- **realestate-rental** — rental income & cash flow; gross/net yield, 3 scenarios, Rental Score.
+- **realestate-neighborhood** — schools (international), MRT/highway connectivity, amenities, flood risk; Neighbourhood Score.
+- **realestate-market** — local market: NAPIC overhang, HPI, OPR, MM2H/foreign policy; Market Score.
+- **realestate-invest** — Buy & Hold / BRRRR / Renovate & Resell; RPGT-aware; Investment Score.
+- **realestate-flip** — fix-and-flip; ARV, reno budget, RPGT-modelled profit; Flip Score.
+- **realestate-commercial** — office/retail/industrial/shop; NOI, yield, lease, DSCR; Commercial Score.
+- **realestate-mortgage** — financing: SBR floating + Islamic, DSR affordability, MOF caps, rent-vs-buy, refinance.
+- **realestate-listing** — bilingual EN + 中文 portal listing copy (iProperty/PropertyGuru) + SEO + social.
+- **realestate-compare** — head-to-head of two properties across 8 weighted categories.
+- **realestate-report-pdf** — compiles PROPERTY-*.md analyses into a client-ready PDF.
+
 ### Skills to Build (backlog)
 
-- **listing-description** — draft luxury subsale listing descriptions from agency data.
 - **followup-message** — draft warm/cold follow-up messages in the lead's language.
 - **social-content** — generate platform-tailored content (RedNote, WeChat, TikTok EN/CN, IG, FB).
 - **market-update** — turn market stats into an education post.
-- **cma-comparables** — prep comparable/CMA summaries.
 - **translate** — natural EN ↔ Chinese/Malay translation.
+
+_(Covered: **listing-description** → realestate-listing; **cma-comparables** → realestate-comps.)_
 
 ## Rules
 
 Domain and style rules live in `.claude/rules/` and apply automatically. Follow them.
+
+**All real-estate skills default to the Malaysian market.** When Spencer pastes any property/real-estate skill (now or in future), localize it to Malaysia before committing — see `.claude/rules/realestate-localization.md`. No need to ask.
 
 ## Decision Log
 
