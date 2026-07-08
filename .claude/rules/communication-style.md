@@ -13,6 +13,7 @@ How to write and present information for Spencer.
 - **Keep it short.**
 - **No fluff** — skip preamble, filler, and restating the question.
 - No padding adjectives or hype.
+- **Never use em dashes (—).** Use commas, brackets, full stops, or "and" instead. Applies to every message, draft, and reply.
 
 ## Internal Tone (Spencer ↔ assistant)
 
