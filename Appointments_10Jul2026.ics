@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:nas-patrick-ta-amendment-20260710@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260710T100000
+DTEND;TZID=Asia/Kuala_Lumpur:20260710T110000
+SUMMARY:Meet Patrick — TA Amendment (Nas / KLTS Setapak)
+LOCATION:Kuala Lumpur
+DESCRIPTION:Meet Patrick Chow (landlord) to discuss the proposed Tenancy Agreement amendment for Nas / Kenangan Coffee at KLTS Setapak 51-G-1. Finalise terms and move to deposit.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Meet Patrick re TA amendment in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aaron-pavilion-dh-viewing-20260710@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260710T140000
+DTEND;TZID=Asia/Kuala_Lumpur:20260710T153000
+SUMMARY:Viewing — Aaron @ Pavilion Damansara Heights (3 units)
+LOCATION:Pavilion Damansara Heights
+DESCRIPTION:Aaron viewing Pavilion Damansara Heights, all partly furnished:\n- 1,878 sq ft — RM15,000/mo\n- 2,303 sq ft — RM15,000/mo\n- 2,803 sq ft — RM22,000/mo
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Aaron Pavilion DH viewing in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
