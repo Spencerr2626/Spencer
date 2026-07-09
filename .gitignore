@@ -13,3 +13,7 @@ secrets/
 # Python
 __pycache__/
 *.pyc
+
+# CRM temp/backup files from surgical edits
+*.xlsx.tmp*
+*.xlsx.bak*
