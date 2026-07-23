@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:patrick-commission-meeting-20260724@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260724T113000
+DTEND;TZID=Asia/Kuala_Lumpur:20260724T123000
+SUMMARY:Meet Patrick Chow - Commission (KLTS Setapak Kenangan tenancy)
+LOCATION:Kuala Lumpur
+DESCRIPTION:Defend RM8,500 letting fee for Nas/Kenangan tenancy (3+3yrs, RM8,500/9,000). Patrick may push to offset Cotti reinstatement (RM18k, Cotti rejected) against the fee. Hold: letting fee is separate from the Cotti dispute. Patrick holds Cotti's forfeited security + utility deposit and can claim Cotti for any shortfall. Offer continued free help chasing Cotti, not a fee discount. Confirm the fee in writing right after.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Patrick commission meeting in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
