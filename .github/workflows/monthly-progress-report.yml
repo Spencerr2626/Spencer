@@ -1,0 +1,64 @@
+name: Monthly Progress Report
+
+# Generates Spencer's one-page business progress PDF from the CRM in the repo,
+# on the 1st of each month, and both commits it to reports/ and uploads it as a
+# downloadable artifact.
+#
+# NOTE: GitHub only runs scheduled workflows from the DEFAULT branch, so this
+# starts firing once this file is merged to the default branch. Cron is in UTC;
+# 01:17 UTC ≈ 09:17 Malaysia time (GMT+8).
+
+on:
+  schedule:
+    - cron: '17 1 1 * *'
+  workflow_dispatch: {}      # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --quiet openpyxl reportlab
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-wqy-zenhei   # CJK font for Chinese client names
+
+      - name: Generate report
+        id: gen
+        run: |
+          # On the 1st, "yesterday" (UTC) is the last day of the month just ended.
+          AS_OF=$(date -u -d "yesterday" +%Y-%m-%d)
+          echo "Generating report as of $AS_OF"
+          python .claude/skills/monthly-progress-report/generate.py "$AS_OF"
+          echo "month=$(date -u -d 'yesterday' +%Y-%m)" >> "$GITHUB_OUTPUT"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: monthly-progress-report
+          path: reports/*.pdf
+          if-no-files-found: error
+
+      - name: Commit report to repo
+        continue-on-error: true      # don't fail the run if the branch is protected
+        run: |
+          git config user.name "kommons-report-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/*.pdf
+          if git diff --cached --quiet; then
+            echo "No new report to commit."
+          else
+            git commit -m "Monthly progress report (${{ steps.gen.outputs.month }})"
+            git push
+          fi
