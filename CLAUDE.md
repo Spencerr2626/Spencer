@@ -33,6 +33,9 @@ Skills are built **organically** — when you notice the same request repeating,
 
 - **daily-lead-followup** — reads the CRM and surfaces who to follow up with today (Hot → Warm → Cold) + drafts a message per lead in their language. `.claude/skills/daily-lead-followup/`
 - **listing-proposal** — generate a branded Kommons "Property Showing Route" proposal deck (PDF) from property specs + photos. Cover → detail + photos page per property → contact back cover. `.claude/skills/listing-proposal/`
+- **monthly-progress-report** — one-page business progress PDF built from the live CRM (GCI, signed/advanced deals, projection, pipeline snapshot). `.claude/skills/monthly-progress-report/`
+
+**Standing month-end report:** On the **first "good morning" (or first session) of each new month**, after the daily triage, proactively offer to run **monthly-progress-report** for the month just ended. Also run it whenever Spencer asks for "my progress" / "progress report". (In-session cron is session-only and cannot hold this cadence, so this instruction is the durable trigger.)
 
 #### `/realestate` suite (all Malaysia-localized — RM, freehold/leasehold, RPGT, MM2H, MOF, NAPIC, SBR)
 
