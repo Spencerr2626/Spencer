@@ -2,19 +2,35 @@
 
 > **Update this file at the start of each quarter.**
 
-_Current quarter: Q2 2026 (Apr–Jun) · Last updated 2026-06-05_
+_Current quarter: Q3 2026 (Jul–Sep) · Last updated 2026-07-30_
 
 ## Annual Goal (2026)
 
-- **Stretch GCI target:** RM 500k (aspirational — well above current pace)
-- **Reality check:** RM 16k YTD vs RM 260k last full year. RM 500k is a stretch; treat it as direction, not a near-term forecast.
-- **Build a team** — begin with first hire (likely VA/admin, see `context/team.md`).
+- **Stretch GCI target:** RM 500k (aspirational).
+- **Reality check (as of 30 Jul):** **RM 21.6k realized** + **~RM 130k signed/advanced** (Datuk land, Umesh, 马太太) working through loans/paperwork → **~RM 152k projected** once they complete. Roughly 3x last year's pace at this point; RM 500k remains a stretch, treat as direction.
+- **Build a team** — first hire (VA/Admin) targeted this quarter.
 
-## This Quarter's Milestones (Q2 2026)
+## This Quarter's Focus (Q3 2026)
 
-1. **Set up a CRM** — move off Excel into a structured system. See `projects/crm-setup/`.
-2. **Build a Mont Kiara listing farm** — target higher-demand listings to grow the pipeline. See `projects/mont-kiara-listing-farm/`.
-3. **Establish a daily lead follow-up habit** — see `projects/lead-follow-up-system/`.
-4. **Consistent content cadence** — see `projects/content-engine/`.
+Three workstreams, in priority order:
 
-_No formal quarterly GCI breakdown set yet — these operational milestones are the informal goals for now, since they're the levers that drive GCI._
+### 1. Refill the pipeline (the growth engine)
+The signed deals are basically done, so the risk is the gap after they close. Attack the listing/lead-supply bottleneck with the warmest, cheapest leads first.
+- **Relationship-bank campaign** — systematic outreach to the **55 done deals** for referrals, repeat business, and lease renewals (in each client's language).
+- **Referrer activation** — quarterly check-in with the **7 referrers** (Andreas, Dr Lee, Joanne, 王哥, Ingo, Sebastien, Caryn).
+- **Mont Kiara listing farm** — win listings in core buildings (Astrea, Allevia, MK10, Kiaraville, etc.) to build inventory and pull buyers.
+- _Target: a steady flow of new active leads + new listings each month._
+
+### 2. First hire — VA / Admin
+- Recruit + onboard the first VA to own CRM upkeep, follow-up scheduling, document prep (TA/offer letters), and portal listing uploads.
+- The closing deals give the runway; Spencer's time is the constraint.
+
+### 3. Close the signed pipeline (~RM 130k)
+- Get **Datuk Francis** (OCBC loan → completion), **Umesh** (SPA → foreign consent → completion ~Dec-Jan), and **马太太** (SPA → completion) over the line.
+
+_Maintained in the background: daily follow-up habit (system live) and content cadence._
+
+## Q3 GCI target
+
+- **Base:** reach **~RM 120k YTD** by end Sep (current RM 21.6k + signed deals completing + new production).
+- **Stretch:** RM 150k YTD.
