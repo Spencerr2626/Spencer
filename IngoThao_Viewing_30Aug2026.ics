@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Spencer Leong Real Estate//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ingo-thao-viewing-20260830@spencerleong
+DTSTART;TZID=Asia/Kuala_Lumpur:20260830T100000
+DTEND;TZID=Asia/Kuala_Lumpur:20260830T123000
+SUMMARY:Ingo & Ms Thao — Viewing (Hijauan Kiara & Sunway Mont)
+LOCATION:Mont Kiara
+DESCRIPTION:Viewing with Ingo & Ms Thao (budget RM1.8m, own-stay then rent, prefer open balcony). Units at Hijauan Kiara and Sunway Mont. Note: C-23-01 Hijauan Kiara paused (owner was hospitalised). Confirm exact time with Ingo.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Ingo & Thao viewing in 2 hours
+END:VALARM
+END:VEVENT
+END:VCALENDAR
