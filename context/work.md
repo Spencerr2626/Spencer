@@ -17,6 +17,7 @@
 - **CRM snapshot (as of 04 Jun 2026):** 58 contacts · 8 active leads · 50 done deals
 - **Live pipeline:** ~RM 20.8M across 5 active purchase deals → **~RM 416k est. commission if all close** at 2%. Hot deals: Datuk Francis, 周先生, Ingo & Ms Thao, 马太太, Umesh Phadke.
 - **Referral network:** ~7 active referrers (Andreas, Dr Lee, Joanne, 王哥, Ingo, Sebastien, Caryn).
+- **Referral fee policy (STANDING):** referral fees are capped at **10%** of Spencer's commission, agreed **in writing up front** before the deal. No open-ended or after-the-fact "balance" arrangements (lesson from the Alfred Chan / Datuk Francis case, Sep 2026, which had to be settled at RM8,700).
 
 ## Lead Sources
 
