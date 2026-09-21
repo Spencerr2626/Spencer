@@ -1,12 +1,12 @@
 # Professional Listing: Residensi Astrea, Mont Kiara
 
-> **Generated:** 21 Sep 2026 | **Asking:** RM 1,370,000 (RM 1,004 psf) | **3+1 BR / 2 BA | 1,364 sq ft | Tenure: confirm (understood freehold)**
+> **Generated:** 21 Sep 2026 | **Asking:** RM 1,370,000 (RM 1,004 psf) | **3+1 BR / 2 BA | 1,364 sq ft | Freehold**
 
-**DISCLAIMER: Verify all specs (esp. tenure) against actual property facts before publishing.**
+**DISCLAIMER: Verify all specs against actual property facts before publishing.**
 
 ## Recommended Headline
-**Designer-Furnished 3+1 Residence in Mont Kiara · Completed 2024**
-**【蒙特凯亚拉 2024 全新精装 3+1 房 · 拎包入住】**
+**Freehold Designer-Furnished 3+1 in Mont Kiara · Completed 2024**
+**【蒙特凯亚拉 2024 全新精装 3+1 房 · 永久地契 · 拎包入住】**
 
 ### Alternatives (EN)
 1. Move-In-Ready 1,364 sq ft in Mont Kiara · ~5.3% Gross Yield
@@ -17,7 +17,7 @@
 
 ## Primary Listing Description (EN)
 
-A brand-new residence, completed 2024, finished to a designer standard and ready to move straight into. This 1,364 sq ft, 3+1-bedroom home sits within Residensi Astrea, a boutique low-density development of just 244 units in the heart of Mont Kiara.
+A brand-new, freehold residence, completed 2024, finished to a designer standard and ready to move straight into. This 1,364 sq ft, 3+1-bedroom home sits within Residensi Astrea, a boutique low-density development of just 244 units in the heart of Mont Kiara.
 
 The living area opens to a full-height sliding door and private balcony, framed by a striking marble feature wall, warm timber panelling and gold-trimmed glass display cabinets, fully furnished and styled throughout. The wet-and-dry kitchen is sleek and handleless in soft grey, with a glass-partitioned wet kitchen, cooker hood, hob and fridge already in place.
 
@@ -33,7 +33,7 @@ Maintenance and sinking fund run at RM 0.40 psf (about RM 546/month). At RM 1,37
 
 ## 房源描述（中文）
 
-2024 年全新落成、精装设计、即可拎包入住。这套 1,364 平方尺、3+1 房的单位，坐落于满家乐核心地段的 Residensi Astrea，全项目仅 244 户，低密度精品社区。
+2024 年全新落成、永久地契、精装设计、即可拎包入住。这套 1,364 平方尺、3+1 房的单位，坐落于满家乐核心地段的 Residensi Astrea，全项目仅 244 户，低密度精品社区。
 
 客厅采光通透，落地玻璃门直通私人阳台；大理石电视背景墙、温润木饰面与金框玻璃展示柜相互映衬，全屋家具家电配齐、格调统一。开放＋封闭双厨设计，浅灰无把手橱柜简约利落，玻璃隔断湿厨、抽油烟机、炉具与冰箱一应俱全。
 
@@ -52,6 +52,7 @@ Maintenance and sinking fund run at RM 0.40 psf (about RM 546/month). At RM 1,37
 **EN**
 - 3+1 Bedrooms · 2 Bathrooms · 2 car park bays
 - 1,364 sq ft built-up · RM 1,004 psf
+- **Freehold** tenure
 - Completed 2024 by UEM Sunrise Bhd
 - Boutique low-density development · only 244 units
 - Fully furnished to designer standard · move-in ready
@@ -68,6 +69,7 @@ Maintenance and sinking fund run at RM 0.40 psf (about RM 546/month). At RM 1,37
 **中文**
 - 3+1 房 · 2 浴 · 2 车位
 - 建筑面积 1,364 平方尺 · 每平方尺 RM 1,004
+- **永久地契**（Freehold）
 - 2024 年由 UEM Sunrise Bhd 建成
 - 低密度精品社区 · 全项目仅 244 户
 - 设计师全装修 · 家具家电齐全 · 拎包入住
@@ -94,7 +96,7 @@ Maintenance and sinking fund run at RM 0.40 psf (about RM 546/month). At RM 1,37
 ## Style Variations
 
 ### Investor (EN)
-At RM 1,370,000 (RM 1,004 psf) with a comparable unit already tenanted at RM 6,000/month, this Mont Kiara 3+1 delivers roughly a **5.3% gross yield** (about 4.8% net after the RM 0.40 psf maintenance). A 2024 completion means minimal near-term capex, and the boutique 244-unit scale keeps common-area costs contained. Mont Kiara's deep expatriate and corporate-tenant pool underpins occupancy, and full designer furnishing lets you list immediately at the top of the rental band. Above the RM 1m mark, the unit is open to foreign and MM2H buyers, widening your exit market. A clean, turnkey hold with income from day one. *Spencer Leong · Kommons Realty · REN 72821.*
+At RM 1,370,000 (RM 1,004 psf) with a comparable unit already tenanted at RM 6,000/month, this Mont Kiara 3+1 delivers roughly a **5.3% gross yield** (about 4.8% net after the RM 0.40 psf maintenance). A 2024 completion means minimal near-term capex, and the boutique 244-unit scale keeps common-area costs contained. Mont Kiara's deep expatriate and corporate-tenant pool underpins occupancy, and full designer furnishing lets you list immediately at the top of the rental band. Freehold tenure and the above-RM 1m price open the unit to foreign and MM2H buyers, widening your exit market. A clean, turnkey hold with income from day one. *Spencer Leong · Kommons Realty · REN 72821.*
 
 ### Family (EN)
 A move-in-ready home for a family that wants space, schools and security in one place. The 3+1 layout gives each child a room plus a flexible fourth space for study or play, and the engineered-timber bedrooms and city-view windows make it feel calm and grown-up. Mont Kiara International School and Garden International School are both a few minutes away, so the morning run is short, and Village Grocer, cafés, clinics and three malls are all within easy reach. Being a 2024 boutique development of only 244 units, it stays quiet and manageable, with everything already furnished so you can simply move in. *Spencer Leong · Kommons Realty · REN 72821.*
@@ -128,7 +130,7 @@ Designer-furnished, move-in ready in Mont Kiara ✨
 #MontKiara #KLProperty #ExpatLiving #CondoForSale #MM2H #InternationalSchool #KualaLumpur
 
 ### WhatsApp blast (co-broke / leads)
-*Residensi Astrea, Mont Kiara — RM 1.37mil*
+*Residensi Astrea, Mont Kiara — RM 1.37mil · Freehold*
 3+1 · 2 bath · 2 car park · 1,364 sq ft · fully furnished (designer reno)
 Completed 2024 (UEM Sunrise) · 244 units · maint RM 0.40 psf
 Comparable unit tenanted at RM 6,000/mo (~5.3% gross)
@@ -145,7 +147,7 @@ View anytime — Spencer, Kommons Realty, REN 72821. Co-broke welcome.
 | Asking / PSF | RM 1,370,000 / RM 1,004 psf |
 | Beds / Baths | 3+1 / 2 |
 | Built-up | 1,364 sq ft |
-| Tenure | **Confirm** (understood freehold) |
+| Tenure | Freehold |
 | Year Completed | 2024 |
 | Developer | UEM Sunrise Bhd |
 | Property Type | Condominium / Serviced Residence |
@@ -155,6 +157,7 @@ View anytime — Spencer, Kommons Realty, REN 72821. Co-broke welcome.
 | Furnishing | Fully furnished (designer reno) |
 | Comparable Rental | RM 6,000/mo → ~5.3% gross / ~4.8% net |
 | Foreign Eligible | Yes (above RM 1m; surcharge applies) |
-| Assessment + Quit Rent | To confirm |
+| Assessment (Cukai Pintu) | RM 1,444 / year |
+| Quit Rent (Cukai Tanah) | ~RM 35–50 / year |
 
-*Generated by AI Real Estate Analyst. Verify facts (tenure, assessment) before publishing.*
+*Generated by AI Real Estate Analyst. Verify facts before publishing.*
